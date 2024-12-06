@@ -1,0 +1,363 @@
+.App {
+    background-color: #F5F0E7;
+    box-sizing: border-box;
+    border-radius: 24px;
+    width: 1160px;
+    margin: 20px auto;
+    padding-bottom: 15.5px;
+}
+
+.App-logo {
+    width: 188px;
+    height: 32px;
+    margin-top: 15.5px;
+    align-self: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin: 0 auto 40px auto;
+    width: 1047px;
+}
+
+.header>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.picked-lesson {
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    /* height: 56px; */
+    background-color: #FFFBF4;
+    border-radius: 12px;
+    padding: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.take-lesson-dropdown {
+    margin-top: 6px;
+    width: 100%;
+    position: absolute;
+    background-color: #FFFBF4;
+    border-radius: 12px;
+    padding: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.take-lesson-container {
+    position: relative;
+}
+
+.main-content {
+    margin-bottom: 40px;
+}
+
+.footer {
+    width: 1047px;
+    margin: auto;
+}
+
+.radio-input-container {
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 15.5px;
+}
+
+.button-container>button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    height: 72px;
+    font-size: 30px;
+    line-height: 28px;
+    letter-spacing: -1.5px;
+}
+
+.button-container>button:last-child {
+    background-color: #FCE1D1;
+    color: #EE7A45;
+}
+
+/* radio */
+
+.classRadio {
+    --radio: #D7CEBD;
+    --radio-checked: #ee7a45;
+    --radio-size: 16px;
+    display: grid;
+    grid-template-columns: auto var(--radio-size);
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 7px;
+}
+
+.classRadio label {
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 20.8px;
+    font-family: "Gilroy";
+    width: max-content;
+    font-weight: 500;
+}
+
+.classRadio input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    height: var(--radio-size);
+    width: var(--radio-size);
+    outline: none;
+    margin: 0 5px 10px 0;
+    cursor: pointer;
+    border: 1px solid var(--radio);
+    background: transparent;
+    border-radius: 50%;
+    display: grid;
+    justify-self: end;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    transition: border 0.5s ease;
+}
+
+.classRadio input[type="radio"]:hover {
+    border: 1px solid #EE7A45;
+}
+
+.classRadio input[type="radio"]:checked:hover {
+    --radio-checked: #F9844F;
+}
+
+.classRadio input[type="radio"]::before,
+.classRadio input[type="radio"]::after {
+    content: "";
+    display: flex;
+    justify-self: center;
+    border-radius: 50%;
+}
+
+.classRadio input[type="radio"]::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    z-index: 1;
+    opacity: var(--opacity, 1);
+}
+
+.classRadio input[type="radio"]::after {
+    position: relative;
+    width: calc(100% / 2);
+    height: calc(100% / 2);
+    background: var(--radio-checked);
+    top: var(--y, 100%);
+    transition: top 0.5s cubic-bezier(0.48, 1.97, 0.5, 0.63);
+}
+
+.classRadio input[type="radio"]:checked {
+    --radio: var(--radio-checked);
+}
+
+.classRadio input[type="radio"]:checked::after {
+    --y: 0%;
+    animation: stretch-animate 0.3s ease-out 0.17s;
+}
+
+.classRadio input[type="radio"]:checked::before {
+    --opacity: 0;
+}
+
+.classRadio input[type="radio"]:checked~input[type="radio"]::after {
+    --y: -100%;
+}
+
+.classRadio input[type="radio"]:not(:checked)::before {
+    --opacity: 1;
+    transition: opacity 0s linear 0.5s;
+}
+
+@keyframes stretch-animate {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    28% {
+        transform: scale(1.15, 0.85);
+    }
+
+    50% {
+        transform: scale(0.9, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+/* radio */
+
+
+/* preloader */
+
+.preloader {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    /* margin: 0 auto; */
+}
+
+.spinner {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    width: 20px;
+    height: 20px;
+    /* border: 3px solid #f3f3f3;
+    border-top: 3px solid transparent; */
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* preloader */
+
+@media screen and (max-width: 1199px) {
+    .App {
+        width: 940px;
+    }
+
+    .footer {
+        width: 907px;
+    }
+
+    .header {
+        width: 907px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .App {
+        width: 640px;
+    }
+
+    .footer {
+        width: 627px;
+    }
+
+    .App-logo {
+        width: 94px;
+        height: 16px;
+    }
+
+    .header {
+        gap: 44px;
+        margin-bottom: 20px;
+        width: 627px;
+    }
+
+    .header>h1 {
+        font-size: 42px;
+        line-height: 51px;
+        text-align: center;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-container>button {
+        font-size: 26px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .App {
+        width: 480px;
+    }
+
+    .footer {
+        width: 467px;
+    }
+
+    .header {
+        width: 467px;
+    }
+
+    .header>h1 {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .header>div {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .take-lesson-container {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .App {
+        width: 320px;
+    }
+
+    .footer {
+        width: 307px;
+    }
+
+    .header {
+        width: 307px;
+    }
+
+    .App-logo {
+        width: 148px;
+        height: 25px;
+    }
+
+    .header>h1 {
+        font-size: 40px;
+        line-height: 33px;
+    }
+
+    .button-container>button {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .save-icon {
+        width: 28px;
+        height: 28px;
+    }
+}

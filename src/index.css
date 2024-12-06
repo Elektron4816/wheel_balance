@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFBF4;
+}
+
+h1 {
+    font-family: 'Gilroy';
+    font-size: 64px;
+    line-height: 51px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #2B2B2B;
+
+}
+
+h2 {
+    font-family: 'Gilroy';
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+}
+
+button {
+    background-color: #EE7A45;
+    border: 2px solid #ee7a45;
+    padding: 13px 24px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    border-radius: 64px;
+    box-sizing: border-box;
+    height: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+textarea {
+    font-family: 'Gilroy';
+}
+
+label {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #313131;
+}
+
+p {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #313131;
+}
+
+@media screen and (max-width: 959px) {
+    h1 {
+        font-size: 42px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    h2 {
+        font-size: 26px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    h2 {
+        font-size: 22px;
+        line-height: 22px;
+    }
+}

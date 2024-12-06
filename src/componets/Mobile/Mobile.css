@@ -1,0 +1,18 @@
+.app-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 100%;
+    padding: 20px;
+}
+
+.app-mobile > h1 {
+    text-align: center;
+}
+
+.mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
